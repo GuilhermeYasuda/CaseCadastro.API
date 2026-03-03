@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseCadastro.Application", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseCadastro.Infra", "..\CaseCadastro.Infra\CaseCadastro.Infra.csproj", "{395C519F-1379-4808-8032-5B6C46365A29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseCadastro.Test.Unit", "..\CaseCadastro.Test.Unit\CaseCadastro.Test.Unit.csproj", "{B745E4A2-9677-47EE-9E01-B08CAB26DC5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{395C519F-1379-4808-8032-5B6C46365A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{395C519F-1379-4808-8032-5B6C46365A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{395C519F-1379-4808-8032-5B6C46365A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B745E4A2-9677-47EE-9E01-B08CAB26DC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B745E4A2-9677-47EE-9E01-B08CAB26DC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B745E4A2-9677-47EE-9E01-B08CAB26DC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B745E4A2-9677-47EE-9E01-B08CAB26DC5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
