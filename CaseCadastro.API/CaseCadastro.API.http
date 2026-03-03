@@ -1,0 +1,6 @@
+@CaseCadastro.API_HostAddress = http://localhost:5051
+
+GET {{CaseCadastro.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
