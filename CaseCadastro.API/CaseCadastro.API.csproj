@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CaseCadastro.Application\CaseCadastro.Application.csproj" />
+    <ProjectReference Include="..\CaseCadastro.Domain\CaseCadastro.Domain.csproj" />
+    <ProjectReference Include="..\CaseCadastro.Infra\CaseCadastro.Infra.csproj" />
   </ItemGroup>
 
 </Project>

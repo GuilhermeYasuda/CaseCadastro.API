@@ -1,7 +1,8 @@
-﻿namespace CaseCadastro.Domain.Domain
+﻿namespace CaseCadastro.Infra.ExternalServices.Responses
 {
-    public class Endereco
+    public class ViaCepResponse
     {
+        //public bool Erro { get; set; }
         public string Cep { get; set; }
         public string Logradouro { get; set; }
         public string Complemento { get; set; }
