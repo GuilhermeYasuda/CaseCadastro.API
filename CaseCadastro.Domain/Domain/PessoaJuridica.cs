@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CaseCadastro.Domain.Domain
 {
     public class PessoaJuridica
     {
-        public Guid Id { get; set; }
         public string RazaoSocial { get; set; }
+        [Key]
         public string Cnpj { get; set; }
         public Endereco Endereco { get; set; }
     }

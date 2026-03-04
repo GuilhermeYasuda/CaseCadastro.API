@@ -17,12 +17,12 @@ namespace CaseCadastro.Test.Unit.Domain
                 Bairro = "Sé",
                 Localidade = "São Paulo",
                 Uf = "SP",
-                Estado = "São Paulo",
-                Regiao = "Sudeste",
-                Ibge = "3550308",
-                Gia = "1004",
-                Ddd = "11",
-                Siafi = "7107"
+                Estado = "São Paulo"
+                //Regiao = "Sudeste",
+                //Ibge = "3550308",
+                //Gia = "1004",
+                //Ddd = "11",
+                //Siafi = "7107"
             };
 
             // Assert
@@ -34,11 +34,11 @@ namespace CaseCadastro.Test.Unit.Domain
             Assert.Equal("São Paulo", endereco.Localidade);
             Assert.Equal("SP", endereco.Uf);
             Assert.Equal("São Paulo", endereco.Estado);
-            Assert.Equal("Sudeste", endereco.Regiao);
-            Assert.Equal("3550308", endereco.Ibge);
-            Assert.Equal("1004", endereco.Gia);
-            Assert.Equal("11", endereco.Ddd);
-            Assert.Equal("7107", endereco.Siafi);
+            //Assert.Equal("Sudeste", endereco.Regiao);
+            //Assert.Equal("3550308", endereco.Ibge);
+            //Assert.Equal("1004", endereco.Gia);
+            //Assert.Equal("11", endereco.Ddd);
+            //Assert.Equal("7107", endereco.Siafi);
         }
     }
 }

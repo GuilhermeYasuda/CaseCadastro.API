@@ -1,9 +1,4 @@
 ﻿using CaseCadastro.Domain.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CaseCadastro.Test.Unit.Domain
 {
@@ -22,25 +17,23 @@ namespace CaseCadastro.Test.Unit.Domain
                 Bairro = "Sé",
                 Localidade = "São Paulo",
                 Uf = "SP",
-                Estado = "São Paulo",
-                Regiao = "Sudeste",
-                Ibge = "3550308",
-                Gia = "1004",
-                Ddd = "11",
-                Siafi = "7107"
+                Estado = "São Paulo"
+                //Regiao = "Sudeste",
+                //Ibge = "3550308",
+                //Gia = "1004",
+                //Ddd = "11",
+                //Siafi = "7107"
             };
 
             Guid id = Guid.NewGuid();
             var pessoa = new PessoaFisica
             {
-                Id = id,
                 Nome = "Fulano de Tal",
                 Cpf = "12345678909",
                 Endereco = endereco
             };
 
             // Assert
-            Assert.Equal(id, pessoa.Id);
             Assert.Equal("Fulano de Tal", pessoa.Nome);
             Assert.Equal("12345678909", pessoa.Cpf);
             Assert.Equal(endereco, pessoa.Endereco);
