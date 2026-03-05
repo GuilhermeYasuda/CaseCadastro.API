@@ -1,9 +1,11 @@
 ﻿using CaseCadastro.Domain.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CaseCadastro.Infra.DbContext
 {
+    [ExcludeFromCodeCoverage]
     public class CaseDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public CaseDbContext(DbContextOptions<CaseDbContext> options) : base(options)

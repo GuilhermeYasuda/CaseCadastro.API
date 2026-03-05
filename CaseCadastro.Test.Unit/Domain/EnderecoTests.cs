@@ -7,9 +7,11 @@ namespace CaseCadastro.Test.Unit.Domain
         [Fact]
         public void Deve_Criar_Endereco_Com_Dados_Validos()
         {
+            Guid id = Guid.NewGuid();
             // Arrange
             var endereco = new Endereco
             {
+                Id = id,
                 Cep = "01001-000",
                 Logradouro = "Praça da Sé",
                 Complemento = "lado ímpar",
@@ -26,6 +28,7 @@ namespace CaseCadastro.Test.Unit.Domain
             };
 
             // Assert
+            Assert.Equal(id, endereco.Id);
             Assert.Equal("01001-000", endereco.Cep);
             Assert.Equal("Praça da Sé", endereco.Logradouro);
             Assert.Equal("lado ímpar", endereco.Complemento);
