@@ -3,7 +3,7 @@ using CaseCadastro.Application.Interfaces.Services;
 using CaseCadastro.Application.Services;
 using CaseCadastro.Domain.Interfaces.ExternalServices;
 using CaseCadastro.Domain.Interfaces.Repositories;
-using CaseCadastro.Infra.Config;
+using CaseCadastro.Infra.Configurations;
 using CaseCadastro.Infra.DbContext;
 using CaseCadastro.Infra.ExternalServices;
 using CaseCadastro.Infra.Repositories;
@@ -35,7 +35,7 @@ builder.Services.AddAutoMapper(
 
 var dbProvider = builder.Configuration["DatabaseProvider"];
 
-if (dbProvider == "Sql")
+if (dbProvider == "SQLite")
 {
     builder.Services.AddScoped<IPessoaFisicaRepository, PessoaFisicaRepository>();
     builder.Services.AddScoped<IPessoaJuridicaRepository, PessoaJuridicaRepository>();

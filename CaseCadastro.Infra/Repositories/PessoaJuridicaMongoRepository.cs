@@ -1,6 +1,6 @@
 ﻿using CaseCadastro.Domain.Domain;
 using CaseCadastro.Domain.Interfaces.Repositories;
-using CaseCadastro.Infra.Config;
+using CaseCadastro.Infra.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;

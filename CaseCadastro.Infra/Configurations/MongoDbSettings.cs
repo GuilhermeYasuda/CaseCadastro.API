@@ -1,4 +1,4 @@
-﻿namespace CaseCadastro.Infra.Config
+﻿namespace CaseCadastro.Infra.Configurations
 {
     public class MongoDbSettings
     {
