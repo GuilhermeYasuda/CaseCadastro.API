@@ -10,7 +10,7 @@ namespace CaseCadastro.Test.Unit.Infra.Repositories
         private CaseDbContext CreateDbContext()
         {
             var options = new DbContextOptionsBuilder<CaseDbContext>()
-                .UseInMemoryDatabase(databaseName: "PessoaFisicaTestDb")
+                .UseInMemoryDatabase(databaseName: $"PessoaFisicaTestDb{Guid.NewGuid()}")
                 .Options;
             return new CaseDbContext(options);
         }
