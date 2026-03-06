@@ -21,7 +21,7 @@ namespace CaseCadastro.Infra.Migrations
 
             modelBuilder.Entity("CaseCadastro.Domain.Domain.Endereco", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
@@ -77,6 +77,9 @@ namespace CaseCadastro.Infra.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("EnderecoId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Nome")

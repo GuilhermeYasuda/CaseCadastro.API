@@ -1,6 +1,5 @@
 ﻿using CaseCadastro.Domain.Domain;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace CaseCadastro.Infra.DbContext

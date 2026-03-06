@@ -3,6 +3,7 @@ using CaseCadastro.Application.Interfaces.Services;
 using CaseCadastro.Application.Services;
 using CaseCadastro.Domain.Interfaces.ExternalServices;
 using CaseCadastro.Domain.Interfaces.Repositories;
+using CaseCadastro.Infra.Config;
 using CaseCadastro.Infra.DbContext;
 using CaseCadastro.Infra.ExternalServices;
 using CaseCadastro.Infra.Repositories;
@@ -15,7 +16,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SupportNonNullableReferenceTypes();
+});
 
 builder.Services.AddScoped<IEnderecoService, EnderecoService>();
 builder.Services.AddScoped<IPessoaFisicaService, PessoaFisicaService>();
@@ -29,16 +33,29 @@ builder.Services.AddAutoMapper(
     typeof(AutoMappingHttpResponseToEntityProfile)
 );
 
-builder.Services.AddScoped<IPessoaFisicaRepository, PessoaFisicaRepository>();
-builder.Services.AddScoped<IPessoaJuridicaRepository, PessoaJuridicaRepository>();
+var dbProvider = builder.Configuration["DatabaseProvider"];
 
-var folder = Environment.SpecialFolder.LocalApplicationData;
-var path = Environment.GetFolderPath(folder);
-string DbPath = System.IO.Path.Join(path, "case.db");
+if (dbProvider == "Sql")
+{
+    builder.Services.AddScoped<IPessoaFisicaRepository, PessoaFisicaRepository>();
+    builder.Services.AddScoped<IPessoaJuridicaRepository, PessoaJuridicaRepository>();
 
-builder.Services.AddDbContext<CaseDbContext>(options =>
-    options.UseSqlite($"Data Source={DbPath}")
-);
+    var folder = Environment.SpecialFolder.LocalApplicationData;
+    var path = Environment.GetFolderPath(folder);
+    string DbPath = System.IO.Path.Join(path, "case.db");
+
+    builder.Services.AddDbContext<CaseDbContext>(options =>
+        options.UseSqlite($"Data Source={DbPath}")
+    );
+}
+else if (dbProvider == "Mongo")
+{
+    builder.Services.Configure<MongoDbSettings>(
+        builder.Configuration.GetSection("MongoDbSettings"));
+
+    builder.Services.AddScoped<IPessoaFisicaRepository, PessoaFisicaMongoRepository>();
+    builder.Services.AddScoped<IPessoaJuridicaRepository, PessoaJuridicaMongoRepository>();
+}
 
 var app = builder.Build();
 

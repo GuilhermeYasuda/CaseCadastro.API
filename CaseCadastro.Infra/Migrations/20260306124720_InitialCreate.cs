@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -35,6 +34,7 @@ namespace CaseCadastro.Infra.Migrations
                 columns: table => new
                 {
                     Cpf = table.Column<string>(type: "TEXT", maxLength: 11, nullable: false),
+                    Id = table.Column<string>(type: "TEXT", nullable: true),
                     Nome = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
                     EnderecoId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
