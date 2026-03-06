@@ -6,10 +6,6 @@ using Moq;
 using Moq.Protected;
 using Newtonsoft.Json;
 using System.Net;
-using System.Net.Http;
-using System.Runtime.ConstrainedExecution;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace CaseCadastro.Test.Unit.Infra.ExternalServices
 {

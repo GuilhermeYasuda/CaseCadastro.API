@@ -1,10 +1,7 @@
-using Xunit;
-using Moq;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using CaseCadastro.Application.Services;
 using CaseCadastro.Domain.Domain;
 using CaseCadastro.Domain.Interfaces.ExternalServices;
+using Moq;
 
 namespace CaseCadastro.Test.Unit.Application
 {

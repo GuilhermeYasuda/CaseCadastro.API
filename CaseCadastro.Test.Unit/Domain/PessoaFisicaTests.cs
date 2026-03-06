@@ -18,11 +18,6 @@ namespace CaseCadastro.Test.Unit.Domain
                 Localidade = "São Paulo",
                 Uf = "SP",
                 Estado = "São Paulo"
-                //Regiao = "Sudeste",
-                //Ibge = "3550308",
-                //Gia = "1004",
-                //Ddd = "11",
-                //Siafi = "7107"
             };
 
             Guid id = Guid.NewGuid();
@@ -34,6 +29,8 @@ namespace CaseCadastro.Test.Unit.Domain
             };
 
             // Assert
+            Assert.NotNull(pessoa);
+            Assert.Null(pessoa.Id);
             Assert.Equal("Fulano de Tal", pessoa.Nome);
             Assert.Equal("12345678909", pessoa.Cpf);
             Assert.Equal(endereco, pessoa.Endereco);

@@ -2,11 +2,6 @@
 using CaseCadastro.Domain.Domain;
 using CaseCadastro.Domain.Interfaces.ExternalServices;
 using CaseCadastro.Domain.Interfaces.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CaseCadastro.Application.Services
 {

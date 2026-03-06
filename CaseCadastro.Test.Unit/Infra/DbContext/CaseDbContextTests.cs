@@ -1,7 +1,6 @@
-using Xunit;
-using Microsoft.EntityFrameworkCore;
-using CaseCadastro.Infra.DbContext;
 using CaseCadastro.Domain.Domain;
+using CaseCadastro.Infra.DbContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace CaseCadastro.Test.Unit.Infra.DbContext
 {
