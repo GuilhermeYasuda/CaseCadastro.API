@@ -29,6 +29,8 @@ namespace CaseCadastro.Test.Unit.Domain
             };
 
             // Assert
+            Assert.NotNull(pessoa);
+            Assert.Null(pessoa.Id);
             Assert.Equal("Empresa de Tal", pessoa.RazaoSocial);
             Assert.Equal("12345678901234", pessoa.Cnpj);
             Assert.Equal(endereco, pessoa.Endereco);

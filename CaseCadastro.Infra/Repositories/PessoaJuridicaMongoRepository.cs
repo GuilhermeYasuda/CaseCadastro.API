@@ -11,6 +11,11 @@ namespace CaseCadastro.Infra.Repositories
     {
         private readonly IMongoCollection<PessoaJuridica> _collection;
 
+        public PessoaJuridicaMongoRepository(IMongoCollection<PessoaJuridica> collection)
+        {
+            _collection = collection;
+        }
+
         public PessoaJuridicaMongoRepository(IOptions<MongoDbSettings> settings)
         {
             var client = new MongoClient(settings.Value.ConnectionString);
